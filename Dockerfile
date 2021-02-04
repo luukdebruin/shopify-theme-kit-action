@@ -4,7 +4,7 @@ RUN apk update
 
 # https://shopify.github.io/themekit/
 RUN apk add --no-cache python ca-certificates curl && \
-    curl -s https://shopify.github.io/themekit/scripts/install.py | python && \
+    curl -s https://raw.githubusercontent.com/Shopify/themekit/master/scripts/install.py | python && \
     apk del curl
 
 # https://help.github.com/en/actions/building-actions/creating-a-docker-container-action
